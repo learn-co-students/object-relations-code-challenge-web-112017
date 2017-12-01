@@ -66,6 +66,8 @@ class Restaurant
   end
 end
 
+
+
 class Review
   attr_reader :customer, :restaurant
   @@all = []
