@@ -64,13 +64,12 @@ class Review
 	end
 
 	def customer
-		@@all.select do |review| review.customer == self.customer}
+		@@all.select {|review| review.customer == self.customer}
 		end 
 	end
 
 	def restaurant
 		@@all.select {|review| review.restaurant == self.restaurant}
-		end
 	end
 
 
@@ -87,8 +86,6 @@ class Restaurant
   def initialize(name)
     @name = name
   end
-
-end
 
 def self.all
 	Review.all.map do |review|
