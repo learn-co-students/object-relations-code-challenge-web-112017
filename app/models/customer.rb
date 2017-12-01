@@ -1,12 +1,40 @@
 class Customer
-  attr_accessor :first_name, :last_name
+
+  @@all = []
+
+  attr_accessor :first_name, :last_name, :reviews
 
   def initialize(first_name, last_name)
     @first_name = first_name
     @last_name  = last_name
+    @reviews = []
+    @@all << self
+  end
+
+  def add_review(restaurant, content)
+    rev = Review.new(restaurant, content)
+    rev.customer = self
+    @reviews << rev
+    rev
+  end
+
+  def self.find_by_name(name)
+    all.select { |cust| cust.full_name == name  }.first
+  end
+
+  def self.find_all_by_first_name(name)
+    all.select { |cust| cust.first_name == name }
+  end
+
+  def self.all_names
+    all.map { |cust| cust.full_name  }
   end
 
   def full_name
     "#{first_name} #{last_name}"
+  end
+
+  def self.all
+    @@all
   end
 end
