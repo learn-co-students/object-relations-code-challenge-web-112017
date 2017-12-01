@@ -13,4 +13,7 @@ class Customer
   def method_thing
   end
 
+  def another_method
+  end
+
 end
