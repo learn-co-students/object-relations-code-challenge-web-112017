@@ -8,6 +8,11 @@ class Review
     @@all << self
   end
 
+  ###### Instance Methods ######
+  def customer
+    self.customer
+  end
+
 
   def self.all
     @@all

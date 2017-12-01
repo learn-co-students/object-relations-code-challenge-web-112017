@@ -31,5 +31,15 @@ Customer.all_names
 burgers = seb.add_review(upland, "Delicious Californian inspired fare in NYC.  Try the burger! *****")
 # given some content and a restaurant, creates a new review and associates it with that customer and that restaurant
 
+
+# Review.all
+Review.all
+# returns all of the reviews
+# Review#customer
+yum.customer
+# returns the customer for that given review
+# Review#restaurant
+# returns the restaurant for that given review
+
 binding.pry
 boo = "Hahahahaha!"
