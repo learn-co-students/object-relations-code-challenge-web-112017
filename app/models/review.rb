@@ -10,25 +10,22 @@ class Review
   end
 
   def self.all
-    #*****************DONE***************
+
     @@all
-    # Review.all
-    # returns all of the reviews
+
   end
 
   def customer
-    #*****************DONE***************
+
     @customer
-    # Review#customer
-    # returns the customer for that given review
+
   end
 
 
   def restaurant
-    #*****************DONE***************
+
     @restaurant
-    # Review#restaurant
-    # returns the restaurant for that given review
+    
   end
 
 end
