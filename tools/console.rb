@@ -28,7 +28,8 @@ Customer.find_all_by_first_name("Sebastian")
 Customer.all_names
 # should return an array of all of the customer full names
 # Customer#add_review(restaurant, content)
-burgers = seb.add_review(upland, "Delicious Californian inspired fare in NYC.  Try the burger! *****")
+burgers = seb.add_review(upland, "Delicious Californian inspired fare in NYC.  Try the burger! Stay for the Caccio e Pepe :) *****")
+yuck = laurel.add_review(okonomi, "I was not a fan of the sea urchin...  I can't believe Seb made me eat that!  **")
 # given some content and a restaurant, creates a new review and associates it with that customer and that restaurant
 
 
@@ -39,7 +40,22 @@ Review.all
 yum.customer
 # returns the customer for that given review
 # Review#restaurant
+yum.restaurant
 # returns the restaurant for that given review
+
+
+# Restaurant.all
+Restaurant.all
+# returns an array of all restaurants
+# Restaurant.find_by_name(name)
+Restaurant.find_by_name("Okonomi BK")
+# given a string of restaurant name, returns the first restaurant that matches
+# Restaurant#reviews
+upland.reviews
+# returns an array of all reviews for that restaurant
+# Restaurant#customers
+okonomi.customers
+# should return all of the customers who have written reviews of that restaurant.
 
 binding.pry
 boo = "Hahahahaha!"
